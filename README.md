@@ -1,5 +1,5 @@
 # grunt-indentator
 
-> A Grunt task to beautify and convert the syntax format on your CSS, SASS and SCSS files.
+> A Grunt task to convert the indentation on files.
 
 (under pre-stable testing)

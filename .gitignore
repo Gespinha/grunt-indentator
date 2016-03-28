@@ -1,0 +1,7 @@
+# GIT IGNORE #
+
+node_modules/
+tmp/
+
+.DS_Store
+.DS_Store?

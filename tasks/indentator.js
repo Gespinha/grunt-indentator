@@ -34,8 +34,18 @@
         grunt.fail.warn('[Files not found] at least one valid file target must be set.');
       }
 
+      files = grunt.file.expandMapping(files, '', {extDot: 'last'});
+      files.forEach(function(file, index){
+        var fileName = file.dest;
+
+        if(fileName.lastIndexOf('.') > -1){
+          files = files.splice(index);
+        }
+      });
+
       if(!error){
         files.forEach(function(file){
+          file = file.dest;
           var code = grunt.file.read(file);
 
           var config = {
@@ -96,5 +106,4 @@
       }
     });
   };
-
 }());

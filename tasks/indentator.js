@@ -34,13 +34,8 @@
         grunt.fail.warn('[Files not found] at least one valid file target must be set.');
       }
 
-      files = grunt.file.expandMapping(files, '', {extDot: 'last'});
-      files.forEach(function(file, index){
-        var fileName = file.dest;
-
-        if(fileName.lastIndexOf('.') > -1){
-          files = files.splice(index);
-        }
+      files = grunt.file.expandMapping(files, '', {extDot: 'last'}).filter(function(file){
+        return (file.dest.lastIndexOf('.') > -1);
       });
 
       if(!error){
@@ -63,11 +58,7 @@
           };
 
           function type(val){
-            if(val === 'space'){
-              return ' ';
-            } else {
-              return '\t';
-            }
+            return val === 'space' ? '' : '\t';
           }
 
           config.curr.input = grunt.util.repeat(config.curr.size, type(config.curr.
@@ -81,7 +72,7 @@
 
             var lineMatch = line.match(match);
 
-            if(lineMatch !== null && lineMatch.index === 0){
+            if(lineMatch !== null && lineMatch[0].length > 0){
               var count = lineMatch[0].length / config.curr.size,
                   update = grunt.util.repeat(count, config.new.input);
 

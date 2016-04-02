@@ -11,9 +11,11 @@ module.exports = function(grunt) {
   grunt.initConfig({  
     indentator: {
       options: {
-        size: 2
+        type: 'space'
+        size: 2,
+        debug: true
       },
-      files: ['*.sass', 'style/**/*.sass']
+      files: ['style/**/*']
     },
     jshint: {
       tasks: ['tasks/*.js']

@@ -1,12 +1,12 @@
 {
   "name": "grunt-indentator",
   "description": "A Grunt task to convert the indentation on files.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": {
     "name": "Goncalo Espinha"
   },
   "homepage": "https://github.com/Gespinha/grunt-indentator",
-  "main": "Gruntfile.js",
+  "main": "tasks/indentator.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/Gespinha/grunt-indentator.git"

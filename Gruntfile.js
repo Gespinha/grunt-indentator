@@ -11,7 +11,7 @@ module.exports = function(grunt) {
   grunt.initConfig({  
     indentator: {
       options: {
-        type: 'space'
+        type: 'space',
         size: 2,
         debug: true
       },
@@ -19,21 +19,12 @@ module.exports = function(grunt) {
     },
     jshint: {
       tasks: ['tasks/*.js']
-    },
-    sass: {
-      test: {
-        options: {
-          check: true
-        },
-        src: ['style.sass']
-      }
     }
   });
 
   grunt.loadTasks('tasks');
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-sass');
 
-  grunt.registerTask('default', ['jshint:tasks','indentator', 'sass:test']);
+  grunt.registerTask('default', ['jshint:tasks','indentator']);
 };

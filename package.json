@@ -1,7 +1,7 @@
 {
   "name": "grunt-indentator",
   "description": "A Grunt task to convert the indentation on files.",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "author": {
     "name": "Goncalo Espinha"
   },

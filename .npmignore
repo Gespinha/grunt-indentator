@@ -1,0 +1,8 @@
+# NPM IGNORE #
+
+node_modules/
+tmp/
+Gruntfile.js
+
+.DS_Store
+.DS_Store?

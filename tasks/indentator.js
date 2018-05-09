@@ -1,7 +1,7 @@
 /*
  * grunt-indentator
  *
- * Copyright (c) 2016 Goncalo Espinha
+ * Copyright (c) 2018 Goncalo Espinha
  * Licensed under the MIT License.
  */
 
@@ -13,11 +13,14 @@
 
       var detectIndent = require('detect-indent');
 
-      var files = this.files[0].orig.src;
       var options = this.options({
         type: 'space',
         size: 4,
         debug: false
+      });
+
+      var files = grunt.file.expandMapping(this.files[0].orig.src, '', {extDot: 'last'}).filter(function(file){
+        return (file.dest.lastIndexOf('.') > -1);
       });
 
       var error = false;
@@ -33,10 +36,6 @@
         error = true;
         grunt.fail.warn('[Files not found] at least one valid file target must be set.');
       }
-
-      files = grunt.file.expandMapping(files, '', {extDot: 'last'}).filter(function(file){
-        return (file.dest.lastIndexOf('.') > -1);
-      });
 
       if(!error){
         files.forEach(function(file){

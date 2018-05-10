@@ -1,7 +1,7 @@
 {
   "name": "grunt-indentator",
   "description": "A Grunt task to convert the indentation on files.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": {
     "name": "Goncalo Espinha"
   },
@@ -27,7 +27,13 @@
     "node": ">= 0.8.0"
   },
   "keywords": [
-    "indentator", "indent-convert", "convert-indent", "indent", "indentation", "convert", "gruntplugin"
+    "indentator",
+    "indent-convert",
+    "convert-indent",
+    "indent",
+    "indentation",
+    "convert",
+    "gruntplugin"
   ],
-  "license":  "MIT"
+  "license": "MIT"
 }

@@ -85,14 +85,19 @@ grunt.initConfig({
 });
 ```
 
-## Release History
+## Changelog
 
+0.1.5 - Fixed a bug where errors were not being displayed correctly when no files were found.
+0.1.4 - Fixed minor bug on the way files are processed.
+0.1.3 - Refactored the plugin to handle complex files better.
+0.1.2 - Fixed minor bugs on file processing.
+0.1.1 - Fixed some major bugs on the file review process.
 0.1.0 - Initial release.
 
 ## License
 
 The MIT License (MIT)
-Copyright (c) 2016 Goncalo Espinha
+Copyright (c) 2018 Goncalo Espinha
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

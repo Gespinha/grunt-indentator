@@ -34,7 +34,7 @@
       }
       if(files.length === 0){
         error = true;
-        grunt.fail.warn('[Files not found] at least one valid file target must be set.');
+        grunt.fail.warn('[Files not found] at least one valid target file must be set.');
       }
 
       if(!error){
